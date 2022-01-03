@@ -145,7 +145,8 @@
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
     align-self: center;
-    margin: 0px auto
+    margin: 0px auto;
+    margin-top: 10px;
   }
   #select-city {
     text-align: center;
