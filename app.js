@@ -1,9 +1,17 @@
 const apiKey = '1af07cb078ea98c3b4b4661a1ba6f347'
 const wURL = 'https://api.openweathermap.org/data/2.5/weather?'
+const unitF = '&units=imperial'
+const unitC = '&units=metric'
 
 const weather = document.querySelector('#weather-data')
 const city = document.querySelector('#select-city')
 const search = document.querySelector('button')
+
+let currWeather;
+let toggleWeatherBool = true
+function toggleWeather(currWeather) {
+  toggleWeatherBool ? renderWeatherDataImperial(currWeather) : renderWeatherDataMetric(currWeather)
+}
 
 const getWeatherSearch = async (city) => {
   const cityWeather = `${wURL}q=${city}&appid=${apiKey}${unitF}`
@@ -44,10 +52,7 @@ function renderWeatherDataImperial(currWeather) {
       <h4>Wind</h4>
       <p class="output">${currWeather.wind.speed} MPH</p>
     </section>
-    <section id="prep">
-      <h4>Preparation Suggestion</h4>
-      <p class="output">${suggestions(currWeather)}</p>
-    </section>
+    
     `
     document.querySelector('#weather-data').insertAdjacentHTML('beforeend', weatherInfo)
     return weatherInfo
@@ -98,10 +103,7 @@ function renderWeatherDataMetric(currWeather) {
       <h4>Wind</h4>
       <p class="output">${windKPH} KPH</p>
     </section>
-    <section id="prep">
-      <h4>Preparation Suggestion</h4>
-      <p class="output">${suggestions(currWeather)}</p>
-    </section>
+    
     `
     document.querySelector('#weather-data').insertAdjacentHTML('beforeend', weatherInfo)
     return weatherInfo
