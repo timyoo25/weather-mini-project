@@ -84,13 +84,6 @@
     text-shadow: 1px 1px black;
     font-size: larger;
   }
-  #prep {
-    font-family: 'Righteous', cursive;
-    color: rgba(0, 0, 0, 0.763);
-    background-color: rgba(199, 208, 216, 0.469);
-    width: 100%;
-    border: 2px solid black;
-  }
 
   .bottom{
     display:flex;
@@ -174,13 +167,7 @@
     color: #ffffffba;
     text-shadow: 2px 2px black;
   }
-  #prep {
-    font-family: 'Righteous', cursive;
-    color: rgba(0, 0, 0, 0.763);
-    background-color: rgba(199, 208, 216, 0.469);
-    width: 100%;
-    border: 2px solid black;
-  }
+
   .output {
     color: #ffffffba;
     text-shadow: 1px 1px black;
